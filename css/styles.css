@@ -265,6 +265,7 @@ main section div h2{
     flex-direction: column;
     padding: 0 30px;
 }
+
 .popular::after{
     content: 'popular';
     position: absolute;
@@ -274,6 +275,44 @@ main section div h2{
     color: var(--white);
     border-radius: 4px;
     padding: 5px;
+}
+
+/* section-3-discorver */
+#discover{
+    /* padding: 0 15px 0 15px; */
+    gap: 40px;
+    margin-top: 20px;
+}
+
+#discover img{
+    width: 322px;
+    height: 380px;
+}
+
+#activities > div{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+#activities h3{
+    text-align: center;
+    padding: 10px;
+}
+
+#activities div a .activ{
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.activ img{
+    border-radius: 12px 12px 0 0;
+}
+#activities a:hover img{
+    transform: scale(1.02);
+    filter: grayscale(0.8);
+    transition: all 0.2s ease-in-out;
 }
 
 /* footer */
