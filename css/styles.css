@@ -211,10 +211,11 @@ main section div h2{
     content: 'recommanded';
     position: absolute;
     top: 10px;
-    left: 159px;
+    left: 149px;
     background: var(--red);
     color: var(--white);
     border-radius: 4px;
+    padding: 5px;
 }
 
 /* section-2-aside */
@@ -272,6 +273,7 @@ main section div h2{
     background: var(--red);
     color: var(--white);
     border-radius: 4px;
+    padding: 5px;
 }
 
 /* footer */
