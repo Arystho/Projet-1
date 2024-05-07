@@ -1,0 +1,337 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* général */
+:root{
+    --black:#000;
+    --red:#f60303;
+    --white:#fff;
+    --grey:#c1c1c1;
+    --lightgrey:#f1f1f1;
+    --opensans: "Open Sans", sans-serif;
+}
+
+*{
+    margin: 0;
+    color: var(--black);
+    font-family: var(--opensans);
+    /* Ajoutes la font family ici */
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2{
+    font-size: 22px;
+    font-weight: 700px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+p{
+    font-size: 16px;
+}
+.grey{
+    color: var(--grey);
+}
+.rouge{
+    color: var(--red);
+}
+.icone{
+    padding: 15px 0 0 0;
+}
+
+/* Ici ajoutes aussi le style des a et des p et des h3 */
+
+/* header */
+header{
+    max-width: 1440px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+nav a{
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+    color: var(--red);
+    transition: all 0.2s;
+    padding-top: 50px;
+}
+
+#logo{
+    /* padding: 10px 10px 0 0;
+    margin-top: 25px; */
+    /* le logo doit avoir un margin top et bottom uniquement */
+    margin: 10px 0;   
+}
+
+nav ul li a:hover{
+    border-top: 1px solid var(--red);
+    transition: all 0.2 ease;
+    padding-top: 50px;
+}
+
+nav ul li{
+    padding-top: 50px;
+    border: 1px solid transparent;
+}
+
+/* Il faut ajouter un padding top 50 et une bordure 1px solid transparent au li  */
+
+/* main */
+/* section-1-search */
+main{
+    max-width: 1440px;
+    margin: auto;
+    padding: 40px;
+}
+
+main section div h2{
+    font-size: 18px;
+    align-content: center;
+}
+
+#search form{
+    display: flex;
+    margin-top: 40px;
+}
+
+#search form button{
+    border-radius: 0 7px 7px 0;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+}
+
+#search form i{
+    color: var(--white);
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: 7px 0 0 7px;
+}
+
+#search div a{
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--red)
+}
+
+#search div a:hover,
+#search div a:hover i{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+#search div{
+    display: flex;
+    margin: 35px 35px 35px 0;
+    gap: 24px;
+}
+
+#search i{
+    color: var(--red);
+}
+
+/* section-2-accommodations */
+#accommodations{
+    display: flex;
+    gap: 40px;
+}
+
+#accommodations #font{
+    background: var(--lightgrey);
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 40px;
+    flex: 2;
+} 
+
+#accommodations #list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#accommodations #list a{
+    background: var(--white);
+    border-radius: 12px;
+    flex: 1 0 30%;
+}
+
+#accommodations article{
+    padding: 5px;
+    position: relative;
+}
+
+.icone{
+    padding: 15px 0 0 0;
+}
+
+#accommodations > div > a{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#list a:hover img,
+#most a:hover img{
+    transform: scale(1.02);
+    filter: grayscale(0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+#accommodations img{
+    width:100%;
+    border-radius: 12px 12px 0 0;
+    height: 160px;
+    object-fit: cover;
+}
+
+.recommanded::after{
+    content: 'recommanded';
+    position: absolute;
+    top: 10px;
+    left: 159px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 4px;
+}
+
+/* section-2-aside */
+#popular{
+    background: var(--lightgrey);
+    flex: 1;
+    padding: 4px;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+#popular #most{
+    padding: 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#popular article{
+    background: var(--white);
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+}
+
+#popular #most .most{
+    height: 160px;
+    width: 40%;
+    border-radius: 12px 0 0 12px;
+}
+
+#popular h2{
+    margin-top: 40px;
+    align-content: center;
+    margin-left: 55px;
+}
+
+#popular #most #grey{
+    gap: 6px;
+    display: flex;
+    margin: 0;
+}
+
+#most article > div{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.popular::after{
+    content: 'popular';
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 4px;
+}
+
+/* footer */
+footer{
+    max-width: 1440px;
+    margin: auto;
+    max-height: 215px; 
+}
+   
+footer > div{
+    background:var(--lightgrey);
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+    display: flex;
+
+    /* Déplace le max width et le margin auto dans la balise footer  */ 
+}
+
+footer > div article{
+    flex: 1;
+}
+
+div article ul{
+    /* Ce n'est pas utile d'agir sur les li ici */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+footer > p{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+/* Sur le footer p on va faire un lien plus direct footer > p */
+
+footer article h2{ 
+   font-size: 18px;
+   display: flex;
+   padding-bottom: 15px;
+}
+
+footer article ul li a:hover{
+    color: var(--red);
+}
+
+/* Pas bon il faut trouver une autre solution */ 
+
+
+
+/* Il faut encore mettre du style pour les ul
+
+- retirer le style d'une liste
+- Retirer le padding left
+- Utiliser du flex pour mettre les éléments en colonne et y ajouter du gap
+
+*/
+
+
+
+
