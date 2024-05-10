@@ -28,7 +28,7 @@ h1,h2{
 }
 
 h3{
-    font-size: 16px;
+    font-size: 15px;
 }
 
 a{
@@ -52,6 +52,10 @@ p{
 /* Ici ajoutes aussi le style des a et des p et des h3 */
 
 /* header */
+#search .fa-magnifying-glass{
+    display: none;
+    border-radius: 0 12px 12px 0;
+}
 header{
     max-width: 1440px;
     margin: auto;
@@ -129,9 +133,12 @@ main section div h2{
 }
 
 #search div a{
+    display: flex;
+    gap: 5px;
     padding: 10px;
     border-radius: 7px;
-    border: 1px solid var(--red)
+    border: 1px solid var(--red);
+    align-items: center;
 }
 
 #search div a:hover,
@@ -144,19 +151,20 @@ main section div h2{
     display: flex;
     margin: 35px 35px 35px 0;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 #search i{
     color: var(--red);
 }
 
-/* section-2-accommodations */
-#accommodations{
+/* section-2-accomodations */
+#accomodations{
     display: flex;
     gap: 40px;
 }
 
-#accommodations #font{
+#accomodations #font{
     background: var(--lightgrey);
     padding: 40px;
     border-radius: 12px;
@@ -164,20 +172,20 @@ main section div h2{
     flex: 2;
 } 
 
-#accommodations #list{
+#accomodations #list{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 40px;
 }
 
-#accommodations #list a{
+#accomodations #list a{
     background: var(--white);
     border-radius: 12px;
     flex: 1 0 30%;
 }
 
-#accommodations article{
+#accomodations article{
     padding: 5px;
     position: relative;
 }
@@ -186,7 +194,7 @@ main section div h2{
     padding: 15px 0 0 0;
 }
 
-#accommodations > div > a{
+#accomodations > div > a{
     display: inline-block;
     margin-top: 25px;
     padding: 10px;
@@ -200,18 +208,22 @@ main section div h2{
     transition: all 0.2s ease-in-out;
 }
 
-#accommodations img{
+#accomodations img{
     width:100%;
     border-radius: 12px 12px 0 0;
     height: 160px;
     object-fit: cover;
 }
 
+#accomodations #font a:hover{
+    color: var(--red);
+}
+
 .recommanded::after{
     content: 'recommanded';
     position: absolute;
     top: 10px;
-    left: 149px;
+    right: 5%;
     background: var(--red);
     color: var(--white);
     border-radius: 4px;
@@ -285,7 +297,7 @@ main section div h2{
 }
 
 #discover img{
-    width: 322px;
+    width: 100%;
     height: 380px;
 }
 
@@ -294,6 +306,7 @@ main section div h2{
     display: flex;
     gap: 40px;
     margin-top: 40px;
+    ;
 }
 
 #activities h3{
@@ -313,6 +326,9 @@ main section div h2{
     transform: scale(1.02);
     filter: grayscale(0.8);
     transition: all 0.2s ease-in-out;
+}
+#activities > div a{
+    flex: 1 0 20%;
 }
 
 /* footer */
@@ -349,8 +365,6 @@ footer > p{
     
 }
 
-/* Sur le footer p on va faire un lien plus direct footer > p */
-
 footer article h2{ 
    font-size: 18px;
    display: flex;
@@ -359,6 +373,84 @@ footer article h2{
 
 footer article ul li a:hover{
     color: var(--red);
+}
+
+/* Responsive tablette - 1024px à 768px */
+@media screen and (max-width:1024px){
+   
+    /* Accomodation */
+    #accomodations{
+        flex-direction: column;
+    }
+    .recommanded::after{
+        right: 5%;
+    }
+    #popular .popular div{
+        padding-left: 10px;
+    }
+    #popular .popular .star{
+        padding-left: 0;
+    }
+
+    /* Discover */
+    #discover{
+        font-size: 100%;
+    }
+    #activities > div a{
+       flex: 1 0 40%;
+    }
+   
+/* Responsive mobile - 767px à 320px */
+}
+@media screen and (max-width:767px){
+
+    /* header */
+    header{
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    header a{
+        align-items: baseline;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* main */
+    #search .fa-magnifying-glass{
+        display: block;
+        border-radius: 0 7px 7px 0;
+    }
+    #search button{
+        display: none;
+    }
+    .recommanded::after{
+        right: 5%;
+    }
+    main #accomodations{
+        flex-direction: column-reverse;
+        display: flex;
+    }
+    #accomodations #list{
+        flex-direction: column;
+    }
+    #popular #most .most{
+        height: 170px;
+    }
+
+    /* activities */
+    #activities > div a{
+        flex: 1 0 100%; 
+    }
+
+    /* footer */
+    footer div {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    footer div article{
+        margin-top: 40px;
+    }
 }
 
 /* Pas bon il faut trouver une autre solution */ 
@@ -373,6 +465,4 @@ footer article ul li a:hover{
 
 */
 
-
-
-
+/* Sur le footer p on va faire un lien plus direct footer > p */
